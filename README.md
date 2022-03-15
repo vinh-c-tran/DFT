@@ -1,2 +1,2 @@
 # DFT
-Working through DFT Scholl 
+Beginning DFT Work via Quantum Espresso
