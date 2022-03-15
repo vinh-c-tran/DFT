@@ -1,0 +1,19 @@
+ &control
+    prefix='pt',
+    pseudo_dir = '/Users/vinhtran/Documents/GitHub/DFT/Energy-Lattice-Constant/Platinum',
+    outdir='/Users/vinhtran/Documents/GitHub/DFT/Energy-Lattice-Constant/Platinum'
+ /
+ &system    
+    ibrav=  4, celldm(1) = 8.1, celldm(3) = 1.6, nat=  2, ntyp= 1,
+    ecutwfc = 20.0, 
+    occupations='smearing', smearing='gauss', degauss= 0.06
+ /
+ &electrons
+ /
+ATOMIC_SPECIES
+ Pt  195.084 pt_pbe_v1.4.uspp.F.UPF
+ATOMIC_POSITIONS (crystal)
+ Pt 0.333333333 0.666666667 0.25
+ Pt 0.666666667 0.333333333 0.75
+K_POINTS automatic
+6 6 6 1 1 1
