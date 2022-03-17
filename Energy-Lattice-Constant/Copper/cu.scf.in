@@ -1,0 +1,24 @@
+&control
+    prefix = 'Copper',
+    pseudo_dir = '/Users/vinhtran/Documents/GitHub/DFT/Energy-Lattice-Constant/Copper',
+    outdir = '/Users/vinhtran/Documents/GitHub/DFT/Energy-Lattice-Constant/Copper',
+/
+&system
+    ibrav = 4,
+    celldm(1) = 7.2,
+    celldm(3) =1.633,
+    nat = 2,
+    ntyp = 1,
+    occupations =  'smearing', 
+    smearing = 'mp',degauss = 0.06,
+    ecutwfc = 30.0,
+/
+&electrons
+/
+ATOMIC_SPECIES
+ cu 63.546 Cu_pbe_v1.2.uspp.F.UPF
+ATOMIC_POSITIONS (crystal)
+ cu  0.00 0.00 0.00
+ cu  0.333333333  0.333333333  0.333333333
+K_POINTS automatic
+ 6 6 6 0 0 0
