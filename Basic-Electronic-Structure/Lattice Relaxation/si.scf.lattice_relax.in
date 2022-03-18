@@ -1,0 +1,34 @@
+&CONTROL
+    calculation = 'vc-relax' 
+    prefix = 'silicon' 
+    outdir = './outdir'
+    pseudo_dir = '/Users/vinhtran/Documents/GitHub/DFT/pseudos' 
+    etot_conv_thr = 1e-5
+    forc_conv_thr = 1e-4
+    
+/
+&SYSTEM
+    ibrav = 2, 
+    celldm(1) = 12, 
+    nat = 2, 
+    ntyp = 1,
+    ecutwfc = 30.0,
+/
+&ELECTRONS
+    conv_thr = 1.0e-8
+/
+&ions 
+/
+&cell
+    cell_dofree = 'ibrav'
+/
+ATOMIC_SPECIES
+    Si 28.086 Si.pbe-n-rrkjus_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS alat
+    Si  0.00  0.00  0.00
+    Si  0.25  0.25  0.25
+
+K_POINTS automatic
+   4 4 4  0 0 0
+

@@ -1,0 +1,8 @@
+&DOS
+	prefix = 'silicon'
+	outdir = './temp'
+	fildos = 'si.dos.dat' 
+	emin = -9.0
+	emax = 16.0 
+/
+
