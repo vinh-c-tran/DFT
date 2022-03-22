@@ -1,1 +1,3 @@
 # Band Structure 
+
+We can consider energy as a function of momentum space... 
