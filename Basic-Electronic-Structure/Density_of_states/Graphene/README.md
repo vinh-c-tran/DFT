@@ -89,7 +89,7 @@ K_POINTS automatic
 ```
 
 ## Step 3: Passing to a DOS Code 
-We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.out` to run this. Note, a really important note, for some reason this will return an `namelist` error if we don't have a blank line at the bottom of the text file after the final `\` (for some reason...). 
+We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.out` to run this. Note, a really important note, for some reason this will return an `namelist` error if we don't have a blank line at the bottom of the text file after the final `\` (for some reason...). This then returns a file called `graphene.dos` (as specified by `filedos = 'graphene.dos'` in the input file) which is a text file with energy values in eV and the density of states (and integrated density of states). 
 ```fortran
  &DOS
     prefix = 'graphene',
@@ -98,3 +98,19 @@ We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.ou
  /
  
 ```
+## Step 4: Plotting 
+We can then pass the output file `graphene.dos` to a plotter. In particular, we can read in this file into a Pandas dataframe in Python/Jupyter and visualize it by calling matplotlib. In particular, we can entirely interface with quantum espresso through python and a jupyter notebook for instant visualization which makes it an attractive option. 
+```python3
+dos_data = pd.read_csv('graphene.dos', delim_whitespace = True,\
+                        skiprows=1, header = None, names = ['E (eV)', 'DOS', 'Int DOS'])
+                        
+dos = dos_data.to_numpy()
+energy = dos.transpose()[0]
+density_of_states = dos.transpose()[1]
+int_dos = dos.transpose()[2]
+```
+
+With the result below plotted (density of states as a function of relative energy) we see that at around 0, that is, the Fermi energy, that graphene exhibits no density of states. This is something that we expect to see due to the band structure of graphene which exhibits two Dirac cones that meet at the interface. 
+<p align = center> 
+<img width="523" alt="Screen Shot 2022-03-22 at 12 16 59 PM" src="https://user-images.githubusercontent.com/76876169/159558624-a61da790-00ac-440a-a9eb-897d054172ec.png">
+</p> 
