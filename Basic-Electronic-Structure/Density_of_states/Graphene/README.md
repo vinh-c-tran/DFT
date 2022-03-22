@@ -58,7 +58,7 @@ Then in the command line we just call `pw.x -in graphene.step_two_nscf.in > grap
     calculation = 'nscf',
     prefix      = 'graphene',
     outdir      = './temp',
-    pseudo_dir  = /Users/vinhtran/Documents/GitHub/DFT/pseudos',        
+    pseudo_dir  = '/Users/vinhtran/Documents/GitHub/DFT/pseudos',        
  /
 
  &SYSTEM
