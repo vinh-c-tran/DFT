@@ -49,13 +49,16 @@ K_POINTS automatic
 ``` 
 
 ## Step 2: `pw.x` Non-SCF Calculation 
-Next, in the same directory, we perform a `calculation = 'nscf'` call. To this end, we can use the following input file 
+Next, in the same directory, we perform a `calculation = 'nscf'` call. To this end, we can use the following input file where the notable changes are that the calculation call in the `&CONTROL` card is now `calculation = 'nscf'`, in the `&SYSTEM` card we now specify an `occupation = 'tetrahedra_opt'` and change the `K-points` to be denser with `12x12x1` points. 
+
+Then in the command line we just call `pw.x -in graphene.step_two_nscf.in > graphene.step_two_nscf.out`. 
+
 ```fortran
  &CONTROL
     calculation = 'nscf',
-    prefix      = 'Graphene_1x1_PBE',
-    ! otudir      = '/tmp',
-    !pseudo_dir  = 'directory with pseudopotentials',        
+    prefix      = 'graphene',
+    outdir      = './temp',
+    pseudo_dir  = /Users/vinhtran/Documents/GitHub/DFT/pseudos',        
  /
 
  &SYSTEM
@@ -75,7 +78,7 @@ Next, in the same directory, we perform a `calculation = 'nscf'` call. To this e
  /
  
 ATOMIC_SPECIES
-   C  12.0107 C.pbe-rrkjus.UPF
+   C  12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
    
 ATOMIC_POSITIONS alat
    C    0.000000    0.0000000   0.000000
@@ -84,3 +87,5 @@ ATOMIC_POSITIONS alat
 K_POINTS automatic
    12 12 1 0 0 0
 ```
+
+## Step 3: Passing to a DOS Code 
