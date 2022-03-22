@@ -446,11 +446,15 @@ CELL_PARAMETERS angstrom
    ```
 
 ## Part 3: `bands.x` Calculation 
-Finally, we need to call a `bands.x` calculation where we pass to `bands.x` and input file of the form 
+Finally, we need to call a `bands.x` calculation where we pass to `bands.x` and input file of the form (where again we need that empty line at the bottom) 
 ```fortran 
 &bands 
     prefix = 'gp' 
     outdir = './temp' 
     filband = 'bands.out' 
 /
+
 ```
+## Plotting the Results
+We can extract the data from the `bands.x` calculation which is stored in `<output_file_name>.gnu`. Importing and plotting this in Matplotlib gives us 
+<img width="557" alt="Screen Shot 2022-03-22 at 4 47 05 PM" src="https://user-images.githubusercontent.com/76876169/159594949-2741e6cc-2065-4d4b-b97a-5db002acd15f.png">
