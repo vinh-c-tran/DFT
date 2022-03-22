@@ -1,0 +1,30 @@
+ &control
+    calculation = 'vc-relax' 
+    prefix='Hf',
+    pseudo_dir = '/Users/vinhtran/Documents/GitHub/DFT/pseudos',
+    outdir = './temp'
+ /
+ &system    
+    ibrav =  4, 
+    celldm(1) = 4.5,
+    celldm(3) = 1.633,  
+    nat =  2, 
+    ntyp = 1,
+    ecutwfc = 30.0,
+    ecutrho = 150.0, 
+    occupations='smearing', smearing='mp', degauss=0.1
+ /
+ &electrons
+ /
+ &ions
+ / 
+ &cell 
+     cell_dofree = 'ibrav' 
+ / 
+ATOMIC_SPECIES
+ Hf 178.486  Hf-sp.oncvpsp.upf
+ATOMIC_POSITIONS alat
+ Hf 0.00 0.00 0.00 
+ Hf 0.00 0.57735026919 0.8165
+K_POINTS automatic
+  4 4 4 1 1 1
