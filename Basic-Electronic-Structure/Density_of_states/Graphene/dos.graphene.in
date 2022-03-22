@@ -1,6 +1,6 @@
- 
-&dos
+ &dos
 	prefix = 'gp',
 	outdir = './temp', 
 	fildos = 'graphene.dos' 
  /
+
