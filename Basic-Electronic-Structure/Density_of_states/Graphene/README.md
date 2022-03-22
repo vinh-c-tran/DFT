@@ -89,10 +89,12 @@ K_POINTS automatic
 ```
 
 ## Step 3: Passing to a DOS Code 
+We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.out` to run this. Note, a really important note, for some reason this will return an `namelist` error if we don't have a blank line at the bottom of the text file (for some reason...). 
 ```fortran
  &DOS
     prefix = 'graphene',
     outdir = './temp'
     fildos = 'graphene.dos'
  /
+ 
 ```
