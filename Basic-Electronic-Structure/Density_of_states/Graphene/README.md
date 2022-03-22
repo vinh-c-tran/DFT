@@ -89,7 +89,7 @@ K_POINTS automatic
 ```
 
 ## Step 3: Passing to a DOS Code 
-We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.out` to run this. Note, a really important note, for some reason this will return an `namelist` error if we don't have a blank line at the bottom of the text file after the final `\` (for some reason...). 
+We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.out` to run this. Note, a really important note, for some reason this will return an `namelist` error if we don't have a blank line at the bottom of the text file after the final `\` (for some reason...). This then returns a file called `graphene.dos` (as specified by `filedos = 'graphene.dos'` in the input file) which is a text file with energy values in eV and the density of states (and integrated density of states). 
 ```fortran
  &DOS
     prefix = 'graphene',
@@ -97,4 +97,10 @@ We use the following input and call `dos.x -in dos.graphene.in > dos.graphene.ou
     fildos = 'graphene.dos'
  /
  
+```
+## Step 4: Plotting 
+We can then pass the output file `graphene.dos` to a plotter. In particular, we can read in this file into a Pandas dataframe in Python/Jupyter and visualize it by calling matplotlib. In particular, we can entirely interface with quantum espresso through python and a jupyter notebook for instant visualization which makes it an attractive option. 
+```python3
+dos_data = pd.read_csv('graphene.dos', delim_whitespace = True,\
+                        skiprows=1, header = None, names = ['E (eV)', 'DOS', 'Int DOS'])
 ```
