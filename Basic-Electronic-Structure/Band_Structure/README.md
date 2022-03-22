@@ -448,4 +448,9 @@ CELL_PARAMETERS angstrom
 ## Part 3: `bands.x` Calculation 
 Finally, we need to call a `bands.x` calculation where we pass to `bands.x` and input file of the form 
 ```fortran 
+&bands 
+    prefix = 'gp' 
+    outdir = './temp' 
+    filband = 'bands.out' 
+/
 ```
