@@ -109,5 +109,6 @@ energy = dos.transpose()[0]
 density_of_states = dos.transpose()[1]
 int_dos = dos.transpose()[2]
 ```
+<p align = center> 
 <img width="523" alt="Screen Shot 2022-03-22 at 12 16 59 PM" src="https://user-images.githubusercontent.com/76876169/159558624-a61da790-00ac-440a-a9eb-897d054172ec.png">
-
+</p> 
