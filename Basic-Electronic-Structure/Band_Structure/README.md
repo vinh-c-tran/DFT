@@ -456,5 +456,8 @@ Finally, we need to call a `bands.x` calculation where we pass to `bands.x` and 
 
 ```
 ## Plotting the Results
-We can extract the data from the `bands.x` calculation which is stored in `<output_file_name>.gnu`. Importing and plotting this in Matplotlib gives us 
+We can extract the data from the `bands.x` calculation which is stored in `<output_file_name>.gnu`. Importing and plotting this in Matplotlib gives us
+
+<p align = center> 
 <img width="557" alt="Screen Shot 2022-03-22 at 4 47 05 PM" src="https://user-images.githubusercontent.com/76876169/159594949-2741e6cc-2065-4d4b-b97a-5db002acd15f.png">
+</p> 
