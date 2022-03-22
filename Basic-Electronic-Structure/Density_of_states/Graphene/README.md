@@ -89,3 +89,10 @@ K_POINTS automatic
 ```
 
 ## Step 3: Passing to a DOS Code 
+```fortran
+ &DOS
+    prefix = 'graphene',
+    outdir = './temp'
+    fildos = 'graphene.dos'
+ /
+```
