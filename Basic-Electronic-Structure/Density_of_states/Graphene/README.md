@@ -9,13 +9,14 @@ To perform a density of states calculation in quantum espresso, we need to perfo
 
 
 ## First Step: `pw.x` SCF Calculation
-We begin with an `scf` calculation. For this we use the following input file for quantum espresso. Note that graphene, a two-dimensional structure, we define 
+We begin with an `scf` calculation. For this we use the following input file for quantum espresso. Note that graphene, a two-dimensional hexagonal structure, we set `ibrav = 4` and specify the lattice constant *a* with `celldm(1) = 4.654` and lattice constant *c* through `celldm(3) = c/a = 3.0` to be large so the only dimension of interest is the 2D XY plane. Lastly, we put two carbon atoms in our unit cell. Note that in this case, one atom is situated at the origin and the other is located at `sqrt(3)/2` away. 
+
 ```fortran
  &CONTROL
     calculation = 'scf',
-    prefix      = 'Graphene_1x1_PBE',
-    ! otudir      = '/tmp',
-    !pseudo_dir  = 'directory with pseudopotentials',        
+    prefix      = 'graphene',
+    outdir      = './temp',
+    pseudo_dir  = '/Users/vinhtran/Documents/GitHub/DFT/pseudos' 
  /
 
  &SYSTEM
@@ -37,7 +38,7 @@ We begin with an `scf` calculation. For this we use the following input file for
  /
  
 ATOMIC_SPECIES
-   C  12.0107 C.pbe-rrkjus.UPF
+   C  12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
    
 ATOMIC_POSITIONS alat
    C    0.000000    0.0000000   0.000000
