@@ -1,0 +1,6 @@
+&bands 
+    prefix = 'gp' 
+    outdir = './temp' 
+    filband = 'bands.out' 
+/
+
