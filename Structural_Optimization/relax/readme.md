@@ -3,6 +3,7 @@ Structural relaxation of atomic positions only
 
 
 ## Quantum Espresso 
+1. Run the structural optimization routine: call the `pw.x` input file with `calculation` set to `calculation = 'relax'`. 
 ```fortran 
  &CONTROL
     calculation = 'relax',
