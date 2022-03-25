@@ -6,12 +6,10 @@
 / 
 &SYSTEM
     ibrav = 1 
-    celldm(1) = 5.0 
+    celldm(1) = 7.5
     nat = 2 
     ntyp = 2 
-
     ecutwfc = 30.0 
-
     occupations = 'smearing' 
     degauss = 0.02
     smearing = 'gauss' 
