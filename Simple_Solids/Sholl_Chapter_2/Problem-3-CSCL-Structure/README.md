@@ -127,3 +127,10 @@ We can extract the fitted parameter `a_0` from `popt_m` and we find `a0 = 6.4409
 <img width="589" alt="Screen Shot 2022-03-25 at 12 42 40 PM" src="https://user-images.githubusercontent.com/76876169/160190670-91187f73-b5d1-46cd-a931-c033b7f872e0.png">
 </p> 
 
+## Visualization 
+To this point we've trusted our input structure to be correct. But we can verify this by plotting it. In particular, we can do the following
+1. Read in the `quantum espresso` input file into an `ase` `Atom` object using `ase.io` `read` 
+2. Then, we can write out the `Atom` object to a `.cif` file to pass to Vesta for visualization or to just call `view()` 
+< p align = center> 
+<img width="682" alt="Screen Shot 2022-03-25 at 12 54 37 PM" src="https://user-images.githubusercontent.com/76876169/160192600-2a68f0a4-4baa-418d-9ea4-fe979ca4b852.png">
+</p> 
