@@ -124,7 +124,7 @@ popt_m, pcov_m = curve_fit(murnaghan, lattice_array, energy, p0 = [6.00, 2.68, 4
 ## Results 
 We can extract the fitted parameter `a_0` from `popt_m` and we find `a0 = 6.4409`. We also have the following plot
 <p center = align> 
-<img width="589" alt="Screen Shot 2022-03-25 at 12 42 40 PM" src="https://user-images.githubusercontent.com/76876169/160190670-91187f73-b5d1-46cd-a931-c033b7f872e0.png">
+<img width="500" alt="Screen Shot 2022-03-25 at 12 42 40 PM" src="https://user-images.githubusercontent.com/76876169/160190670-91187f73-b5d1-46cd-a931-c033b7f872e0.png">
 </p> 
 
 ## Visualization 
